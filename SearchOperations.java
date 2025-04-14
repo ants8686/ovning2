@@ -3,7 +3,7 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.SortedSet;
 
-interface SearchOperations {
+ interface SearchOperations {
 	/**
 	 * Returnerar antalet unika artister
 	 * <p>
