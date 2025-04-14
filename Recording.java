@@ -58,3 +58,4 @@ public class Recording {
 				Objects.equals(type, recording.type);
 	}
 }
+

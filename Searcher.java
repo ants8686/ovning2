@@ -80,5 +80,16 @@ public class Searcher implements SearchOperations{
 
 	}
 
+
+	@Override
+	public Collection<Recording> getRecordingsByGenreAndYear(String genre, int yearFrom, int yearTo) {
+		SortedSet<Recording> recordingsByYear = new TreeSet<>(Comparator.comparing(Recording::getYear));
+		for(Recording r : recordings){
+			if(r.getYear() >= yearFrom && r.getYear() <= yearTo){
+				recordingsByYear.add(r);
+			}
+		}
+		return Collections.unmodifiableSortedSet(recordingsByYear);
+	}
 }
 
