@@ -5,7 +5,6 @@ public final class Data {
 	private final List<Recording> recordings = new ArrayList<>();
 	private final Random random = new Random();
 
-	//Hej
 
 	public Data() {
 		loadData();
