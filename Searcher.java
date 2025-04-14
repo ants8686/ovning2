@@ -77,6 +77,11 @@ public class Searcher implements SearchOperations{
 	}
 	@Override
 	public Collection<Recording> getRecordingsByGenre(String genre){
+		Set<Recording> recordingsByGenre = new HashSet<>();
+		for(Recording r : recordings){
+			if(r.getGenre().equals(genre))
+		}
+
 
 	}
 
