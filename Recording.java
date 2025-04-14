@@ -1,4 +1,5 @@
 import java.util.Collection;
+import java.util.Objects;
 import java.util.Set;
 
 public class Recording {
@@ -39,5 +40,21 @@ public class Recording {
 	@Override
 	public String toString() {
 		return String.format("{ %s | %s | %s | %d | %s }", artist, title, genre, year, type);
+	}
+
+	@Override
+	public int hashCode(){
+		return Objects.hash(artist,title,genre,year,type);
+	}
+	@Override
+	public boolean equals(Object o){
+		if(this == o) return true;
+		if(o == null || getClass() != o.getClass()) return false;
+		Recording recording = (Recording) o;
+		return year == recording.year &&
+				Objects.equals(artist, recording.artist) &&
+				Objects.equals(title, recording.title) &&
+				Objects.equals(genre, recording.genre) &&
+				Objects.equals(type, recording.type);
 	}
 }
