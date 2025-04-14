@@ -80,6 +80,8 @@ public class Searcher implements SearchOperations{
 		Set<Recording> recordingsByGenre = new HashSet<>();
 		for(Recording r : recordings){
 			if(r.getGenre().equals(genre))
+
+				//TEST
 		}
 
 
